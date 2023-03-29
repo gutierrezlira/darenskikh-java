@@ -3,7 +3,9 @@ package org.aston;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
+        System.setProperty("file.encoding", "UTF-8");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Выберите задание (1-3): ");
         int choice = scanner.nextInt();
@@ -55,6 +57,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int n;
+
         do {
             System.out.print("Введите длину массива (больше 0): ");
             n = scanner.nextInt();
@@ -75,6 +78,5 @@ public class Main {
                 System.out.println(arr[i]);
             }
         }
-
     }
 }
