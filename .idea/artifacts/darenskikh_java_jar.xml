@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="darenskikh-java:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/darenskikh_java_jar</output-path>
+    <root id="archive" name="darenskikh-java.jar">
+      <element id="module-output" name="darenskikh-java" />
+    </root>
+  </artifact>
+</component>

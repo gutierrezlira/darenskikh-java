@@ -1,12 +1,14 @@
 package org.aston;
 
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.setProperty("file.encoding", "UTF-8");
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(new InputStreamReader(System.in, StandardCharsets.UTF_8));
+
         System.out.println("Выберите задание (1-3): ");
         int choice = scanner.nextInt();
         switch (choice) {
@@ -32,11 +34,11 @@ public class Main {
         do {
             System.out.print("Введите число (или 0 для выхода): ");
             number = scanner.nextInt();
+
             if (number > 7) {
                 System.out.println("Привет");
             }
         } while (number != 0);
-
     }
 
     private static void greeting() {
