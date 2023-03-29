@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in, "utf-8");
+        System.setProperty("console.encoding","utf-8");
         System.out.print("Введите имя: ");
         String name = scanner.nextLine().trim();
         if (name.isEmpty()) {
