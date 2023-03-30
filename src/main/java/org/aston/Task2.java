@@ -1,16 +1,20 @@
 package org.aston;
 
+import java.io.Console;
 import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in, "utf-8");
-        System.setProperty("console.encoding","utf-8");
+        String name;
         System.out.print("Введите имя: ");
-        String name = scanner.nextLine().trim();
-        if (name.isEmpty()) {
-            System.out.println("Имя не может быть пустым");
-        } else if (name.equalsIgnoreCase("вячеслав")) {
+        Console console = System.console();
+
+        if (console != null) {
+            name = console.readLine().trim();
+        }else{
+            Scanner scanner = new Scanner(System.in);
+            name = scanner.nextLine();
+        } if (name.equalsIgnoreCase("вячеслав")) {
             System.out.println("Привет, Вячеслав");
         } else {
             System.out.println("Нет такого имени");
